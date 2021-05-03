@@ -13,7 +13,7 @@
             <div class="box-header">
               <h2 class="box-title">TABLE REKAP DATA VERIFIKATOR</h2>
             </div>
-            
+
           </div>
           <!-- /.box -->
 
@@ -30,49 +30,49 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        Nama 
+                        Nama
                       </label>
-                    </div>   
+                    </div>
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        Alamat 
+                        Alamat
                       </label>
-                    </div>   
+                    </div>
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        NIK 
+                        NIK
                       </label>
-                    </div>   
+                    </div>
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        No.Kartu Keluarga 
+                        No.Kartu Keluarga
                       </label>
-                    </div>                       
+                    </div>
                   </th>
-                  
+
                 </tr>
                 </thead>
                 <tbody>
-                
+                  <?php
+                  $no = 1;
+                  foreach($datasurat as $u){
+                      ?>
                 <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>dadhsadh</td>
-                  <td>dadhsadh</td>
-                  <td>ajkdhajksh</td>
+                  <td><?php echo $u->penerima ?></td>
                 </tr>
+                  <?php } ?>
                 </tbody>
                 <tfoot>
                 <tr>

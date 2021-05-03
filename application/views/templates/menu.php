@@ -1,4 +1,4 @@
-<?php 
+<?php
   $user = $this->session->userdata('admin');
   $modul= $this->session->userdata('modul');
   $menu = $this->session->userdata('menu');
@@ -34,7 +34,7 @@
           MAIN NAVIGATION
           <!-- <br><small style="font-weight: bold;"><?php // "Tahun Data : ".get_sesi("TAHUN") ?></small> -->
         </li>
-        
+
 
         <li class="<?= ($uri_segement=='dashboard')?'menu-open':''; ?>">
           <a href="<?= base_url("dashboard") ?>">
@@ -43,9 +43,9 @@
         </li>
 
         <?= menu_create($menu, $modul, 'sidebar-menu', $uri_segement) ?>
-        
+
          <li>
-            <a href="<?= base_url("dashboard/rekap") ?>">
+            <a href="<?= base_url("rekap") ?>">
               <i class="fa fa-clone"></i> <span>Rekap</span>
             </a>
         </li>
@@ -57,13 +57,9 @@
             </a>
           </li>
 
-      
+
 
         </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
-
-
-
-
