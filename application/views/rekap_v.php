@@ -8,12 +8,12 @@
           <!-- /.box -->
     <!-- Main content -->
           <div class="row">
-        <div class="col-xs-10">
+        <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
               <h2 class="box-title">TABLE REKAP DATA VERIFIKATOR</h2>
             </div>
-
+            
           </div>
           <!-- /.box -->
 
@@ -30,56 +30,110 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        Nama
+                        Tanggal Pengajuan
                       </label>
-                    </div>
+                    </div>   
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        Alamat
+                        Nama 
                       </label>
-                    </div>
+                    </div>   
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        NIK
+                        NIK 
                       </label>
-                    </div>
+                    </div>   
                   </th>
 
                   <th>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox">
-                        No.Kartu Keluarga
+                        Nomor Kartu Keluarga 
                       </label>
-                    </div>
+                    </div>   
                   </th>
 
+                  <th>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">
+                        Nomor KIS
+                      </label>
+                    </div>   
+                  </th>
+
+                  <th>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">
+                        Alamat 
+                      </label>
+                    </div>   
+                  </th>
+
+                  <th>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">
+                        Faskes/Puskesmas 
+                      </label>
+                    </div>                       
+                  </th>
+
+                  <th>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">
+                        Jenis Surat 
+                      </label>
+                    </div>                       
+                  </th>
+
+                  <th>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox">
+                        Keterangan 
+                      </label>
+                    </div>                       
+                  </th>
+                  
                 </tr>
                 </thead>
                 <tbody>
-                  <?php
-                  $no = 1;
-                  foreach($datasurat as $u){
-                      ?>
+                
                 <tr>
-                  <td><?php echo $u->penerima ?></td>
+                  <td>Other browsers</td>
+                  <td>All others</td>
+                  <td>dadhsadh</td>
+                  <td>dadhsadh</td>
+                  <td>ajkdhajksh</td>
+                  <td>ajkdhajksh</td>
+                  <td>ajkdhajksh</td>
+                  <td>ajkdhajksh</td>
+                  <td>ajkdhajksh</td>
                 </tr>
-                  <?php } ?>
                 </tbody>
                 <tfoot>
                 <tr>
+                  <th>Tanggal Pengajuan</th>
                   <th>Nama</th>
-                  <th>Alamat</th>
                   <th>NIK</th>
-                  <th>No.Kartu Keluarga</th>
+                  <th>Nomor KK</th>
+                  <th>Nomor KIS</th>
+                  <th>Alamat</th>
+                  <th>Faskes/Puskesmas</th>
+                  <th>Jenis Surat</th>
+                  <th>Keterangan</th>
                 </tr>
                 </tfoot>
               </table>
