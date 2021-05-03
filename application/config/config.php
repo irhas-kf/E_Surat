@@ -326,7 +326,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'abcde~!@#$%^&*()_+';
+$config['encryption_key'] = 'e-surat#abcde~!@#$%^&*()_+';
 
 /*
 |--------------------------------------------------------------------------
