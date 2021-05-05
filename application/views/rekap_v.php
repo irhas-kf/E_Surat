@@ -7,139 +7,89 @@
 
           <!-- /.box -->
     <!-- Main content -->
+        <div class="row">
+        <div class="col-xs-5">
+        <div class="box-body">
+
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">FORM REKAP LAMPIRAN SURAT</h3>
+            </div>
+
+      <div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title">Select2</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
           <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h2 class="box-title">TABLE REKAP DATA VERIFIKATOR</h2>
-            </div>
             
-          </div>
-          <!-- /.box -->
+            <!-- /.col -->
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Pilih Rekap</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Rekap"
+                        style="width: 100%;">
+                  <option>Tanggal Pengajuan</option>
+                  <option>Nama</option>
+                  <option>NIK</option>
+                  <option>Nomor KK</option>
+                  <option>Nomor KIS</option>
+                  <option>Alamat</option>
+                  <option>Faskes</option>
+                  <option>Jenis Surat</option>
+                  <option>Keterangan</option>
 
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+                </select>
+              </div>
+              <!-- /.form-group -->
+
+              <div class="form-group"> 
+                <label>Pilih Cetak per Bulan</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Bulan">
+                <style="width: 100%;">
+                  <option>Januari</option>
+                  <option>Februari</option>
+                  <option>Maret</option>
+                  <option>April</option>
+                  <option>Mei</option>
+                  <option>Juni</option>
+                  <option>Juli</option>
+                  <option>Agustus</option>
+                  <option>September</option>
+                  <option>Oktober</option>
+                  <option>November</option>
+                  <option>Desember</option>
+
+                </select>
+
+
+
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Tanggal Pengajuan
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Nama 
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        NIK 
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Nomor Kartu Keluarga 
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Nomor KIS
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Alamat 
-                      </label>
-                    </div>   
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Faskes/Puskesmas 
-                      </label>
-                    </div>                       
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Jenis Surat 
-                      </label>
-                    </div>                       
-                  </th>
-
-                  <th>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">
-                        Keterangan 
-                      </label>
-                    </div>                       
-                  </th>
-                  
-                </tr>
-                </thead>
-                <tbody>
-                
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>dadhsadh</td>
-                  <td>dadhsadh</td>
-                  <td>ajkdhajksh</td>
-                  <td>ajkdhajksh</td>
-                  <td>ajkdhajksh</td>
-                  <td>ajkdhajksh</td>
-                  <td>ajkdhajksh</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                  <th>Tanggal Pengajuan</th>
-                  <th>Nama</th>
-                  <th>NIK</th>
-                  <th>Nomor KK</th>
-                  <th>Nomor KIS</th>
-                  <th>Alamat</th>
-                  <th>Faskes/Puskesmas</th>
-                  <th>Jenis Surat</th>
-                  <th>Keterangan</th>
-                </tr>
-                </tfoot>
-              </table>
-            </div>
-            <!-- /.box-body -->
+            <!-- /.col -->
           </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+          <button type="submit" class="btn btn-success ">Rekap </button>
+          <button type="submit" class="btn bg-orange ">Cetak</button>
+          <button type="submit" class="btn btn-danger ">Batal</button>
+
+        </div>
+      </div>
+   
+                </div>
+              </div>
+              <!-- /.box-body -->
+        </div>
           <!-- /.box -->
         </div>
         <!-- /.col -->
