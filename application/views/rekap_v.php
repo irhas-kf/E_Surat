@@ -52,7 +52,7 @@
               <div class="form-group"> 
                 <label>Pilih Cetak per Bulan</label>
                 <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Bulan">
-                <style="width: 100%;">
+                        <style="width: 60%;">
                   <option>Januari</option>
                   <option>Februari</option>
                   <option>Maret</option>
@@ -69,22 +69,14 @@
                 </select>
             </div>
 
-              <div class="form-group"> 
-                <label>Pilih Cetak per Bulan</label>
+            <div class="form-group">
+                <label>Pilih Cetak per Tahun</label>
                 <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Bulan">
                 <style="width: 100%;">
-                  <option>Januari</option>
-                  <option>Februari</option>
-                  <option>Maret</option>
-                  <option>April</option>
-                  <option>Mei</option>
-                  <option>Juni</option>
-                  <option>Juli</option>
-                  <option>Agustus</option>
-                  <option>September</option>
-                  <option>Oktober</option>
-                  <option>November</option>
-                  <option>Desember</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  
+
 
                 </select>
               </div>
