@@ -75,9 +75,6 @@
                 <style="width: 100%;">
                   <option>2021</option>
                   <option>2022</option>
-                  
-
-
                 </select>
               </div>
 
