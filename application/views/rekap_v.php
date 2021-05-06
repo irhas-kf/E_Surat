@@ -30,7 +30,7 @@
           <div class="row">
             
             <!-- /.col -->
-            <div class="col-md-4">
+            <div class="col-md-7">
               <div class="form-group">
                 <label>Pilih Rekap</label>
                 <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Rekap"
@@ -67,7 +67,27 @@
                   <option>Desember</option>
 
                 </select>
+            </div>
 
+              <div class="form-group"> 
+                <label>Pilih Cetak per Bulan</label>
+                <select class="form-control select2" multiple="multiple" data-placeholder="Pilih Bulan">
+                <style="width: 100%;">
+                  <option>Januari</option>
+                  <option>Februari</option>
+                  <option>Maret</option>
+                  <option>April</option>
+                  <option>Mei</option>
+                  <option>Juni</option>
+                  <option>Juli</option>
+                  <option>Agustus</option>
+                  <option>September</option>
+                  <option>Oktober</option>
+                  <option>November</option>
+                  <option>Desember</option>
+
+                </select>
+              </div>
 
 
               </div>
@@ -81,7 +101,7 @@
         <div class="box-footer">
           <button type="submit" class="btn btn-success ">Rekap </button>
           <button type="submit" class="btn bg-orange ">Cetak</button>
-          <button type="submit" class="btn btn-danger ">Batal</button>
+          <button type="submit" class="btn btn-danger ">Hapus</button>
 
         </div>
       </div>
