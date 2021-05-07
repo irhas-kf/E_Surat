@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2021 at 05:59 AM
+-- Generation Time: May 07, 2021 at 08:02 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `mahasiswa`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faskes`
+--
+
+CREATE TABLE `faskes` (
+  `id_faskes` int(11) NOT NULL,
+  `puskesmas_blooto` int(16) NOT NULL,
+  `puskesmas_gedongan` int(16) NOT NULL,
+  `puskesmas_kedundung` int(16) NOT NULL,
+  `puskesmas_kranggan` int(16) NOT NULL,
+  `puskesmas_mentikan` int(16) NOT NULL,
+  `puskesmas_wates` int(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis_surat`
+--
+
+CREATE TABLE `jenis_surat` (
+  `id_surat` int(16) NOT NULL,
+  `bayi_baru_lahir` int(16) NOT NULL,
+  `penyakit_kronis` int(16) NOT NULL,
+  `pengajuan_ibu_hamil` int(16) NOT NULL,
+  `pbid_ex_mandiri` int(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -48,26 +78,14 @@ INSERT INTO `posting` (`id`, `judul`, `konten`, `id_user`) VALUES
 --
 
 CREATE TABLE `rekap_surat` (
-  `nomor_surat` varchar(16) NOT NULL,
-  `perihal` varchar(32) NOT NULL,
-  `nama_instansi` varchar(32) NOT NULL,
-  `tanggal_terima` date NOT NULL,
-  `penerima` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `surat`
---
-
-CREATE TABLE `surat` (
-  `id` int(32) NOT NULL,
-  `nomor_surat` varchar(32) NOT NULL,
-  `perihal` varchar(32) NOT NULL,
-  `nama_instansi` varchar(32) NOT NULL,
-  `tanggal_terima` date NOT NULL,
-  `penerima` varchar(32) NOT NULL
+  `id` int(10) NOT NULL,
+  `tanggal_pengajuan` date NOT NULL,
+  `nama` varchar(32) NOT NULL,
+  `nik` int(32) DEFAULT NULL,
+  `no_kartu_keluarga` varchar(32) NOT NULL,
+  `nomor_kis` varchar(32) NOT NULL,
+  `alamat` varchar(32) NOT NULL,
+  `keterangan` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -232,15 +250,27 @@ INSERT INTO `user_role` (`ID`, `LEVEL_ID`, `MODUL_ID`, `_CREATE`, `_READ`, `_UPD
 --
 
 --
+-- Indexes for table `faskes`
+--
+ALTER TABLE `faskes`
+  ADD PRIMARY KEY (`id_faskes`);
+
+--
+-- Indexes for table `jenis_surat`
+--
+ALTER TABLE `jenis_surat`
+  ADD PRIMARY KEY (`id_surat`);
+
+--
 -- Indexes for table `posting`
 --
 ALTER TABLE `posting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `surat`
+-- Indexes for table `rekap_surat`
 --
-ALTER TABLE `surat`
+ALTER TABLE `rekap_surat`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -284,10 +314,10 @@ ALTER TABLE `posting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `surat`
+-- AUTO_INCREMENT for table `rekap_surat`
 --
-ALTER TABLE `surat`
-  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `rekap_surat`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user_data`
