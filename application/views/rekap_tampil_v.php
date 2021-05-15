@@ -54,7 +54,7 @@
                       <option value="no_kartu_keluarga">Nomor KK</option>
                       <option value="nomor_kis">Nomor KIS</option>
                       <option value="alamat">Alamat</option>
-                      <option value="nama_fasker">Faskes</option>
+                      <option value="nama_faskes">Faskes</option>
                       <option value="nama_jenis_surat">Jenis Surat</option>
                       <option value="keterangan">Keterangan</option>
                     </select>
