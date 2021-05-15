@@ -44,9 +44,15 @@
 
         <?= menu_create($menu, $modul, 'sidebar-menu', $uri_segement) ?>
 
+        <li>
+           <a href="<?= base_url("Surat") ?>">
+             <i class="fa fa-book"></i> <span>Surat</span>
+           </a>
+        </li>
+
          <li>
             <a href="<?= base_url("rekap") ?>">
-              <i class="fa fa-clone"></i> <span>Rekap</span>
+              <i class="fa fa-clipboard"></i> <span>Rekap</span>
             </a>
         </li>
 

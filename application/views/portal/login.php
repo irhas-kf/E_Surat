@@ -27,13 +27,13 @@
 <?php if($this->session->userdata('admin')==""): ?>
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?= base_url() ?>"><b>Admin</b>LTE</a>
+    <a href="<?= base_url() ?>"><b>E</b>Surat</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg"><?= "CodeIgniter v.".CI_VERSION ?></p>
 
-    
+
     <?php
         $act = ($this->input->get("act")!="") ? $this->input->get("act") : "";
         $set_tahun = ($this->input->get("tahun")!="") ? $this->input->get("tahun") : '0';

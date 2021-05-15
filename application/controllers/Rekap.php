@@ -27,8 +27,37 @@ class Rekap extends MyBasecontroller {
 	public function index()
 	{
 		$data['content']='rekap_v';
-		$data['datasurat'] = $this->m_read->tampil_datasurat();
 		$this->load->view('templates/index',$data);
 
+	}
+
+	public function aksi_tampil()
+	{
+		$multipelfiled = $this->input->post('subject');
+		$bulan = $this->input->post('bulan');
+		$tahun = $this->input->post('tahun');
+
+		if ($this->input->post('tampil')) {
+			$rekaptampil = $this->m_read->rekap_tampil($bulan,$tahun);
+			$data['rekaptampil']=$rekaptampil;
+			$data['datafiledrekapsurat']=$multipelfiled;
+			$data['content']='rekap_tampil_v';
+			$this->load->view('templates/index',$data);
+		}
+		if ($this->input->post('pdf')) {
+			$data['datafiledrekapsurat']=$multipelfiled;
+			$data['content']='rekap_pdf_v';
+			$this->load->view('templates/index',$data);
+		}
+		if ($this->input->post('excel')) {
+			$data['datafiledrekapsurat']=$multipelfiled;
+			$data['content']='rekap_excel_v';
+			$this->load->view('templates/index',$data);
+		}
+		if ($this->input->post('word')) {
+			$data['datafiledrekapsurat']=$multipelfiled;
+			$data['content']='rekap_word_v';
+			$this->load->view('templates/index',$data);
+		}
 	}
 }

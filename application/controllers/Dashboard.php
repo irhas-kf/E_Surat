@@ -26,29 +26,9 @@ class Dashboard extends MyBasecontroller {
 
 	public function index()
 	{
+
 		$data['content']='dashboard_v';
+
 		$this->load->view('templates/index',$data);
-	}
-
-	public function rekap_aksi()
-	{
-		$nomor_surat = $this->input->post('nomor_surat');
-		$perihal = $this->input->post('perihal');
-		$nama_instansi = $this->input->post('nama_instansi');
-		$tgl_terima = $this->input->post('tgl_terima');
-		$penerima = $this->input->post('penerima');
-
-		$datainsert = array(
-			'nomor_surat' => $nomor_surat,
-			'perihal' => $perihal,
-			'nama_instansi' => $nama_instansi,
-			'tanggal_terima' => $tgl_terima,
-			'penerima' => $penerima,
-			);
-
-		$this->m_insert->input_data($datainsert,'surat');
-
-		redirect('/Dashboard');
-
 	}
 }
