@@ -56,7 +56,7 @@
             </a>
         </li>
 
-
+<hr>
           <li>
             <a href="#" id="btn-logout">
               <i class="fa fa-sign-out"></i> <span>Keluar</span>

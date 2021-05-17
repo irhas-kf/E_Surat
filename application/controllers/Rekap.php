@@ -26,7 +26,11 @@ class Rekap extends MyBasecontroller {
 
 	public function index()
 	{
+		$bulansaatini = $this->m_read->bulan_saatini();
+		$tahunsaatini = $this->m_read->tahun_saatini();
 		$data['content']='rekap_v';
+		$data['tahunsaatini']=$tahunsaatini;
+		$data['bulansaatini']=$bulansaatini;
 		$this->load->view('templates/index',$data);
 
 	}
@@ -39,6 +43,10 @@ class Rekap extends MyBasecontroller {
 
 		if ($this->input->post('tampil')) {
 			$rekaptampil = $this->m_read->rekap_tampil($bulan,$tahun);
+			$bulansaatini = $this->m_read->bulan_saatini();
+			$tahunsaatini = $this->m_read->tahun_saatini();
+			$data['tahunsaatini']=$tahunsaatini;
+			$data['bulansaatini']=$bulansaatini;
 			$data['rekaptampil']=$rekaptampil;
 			$data['datafiledrekapsurat']=$multipelfiled;
 			$data['content']='rekap_tampil_v';

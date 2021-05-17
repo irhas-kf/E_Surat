@@ -64,18 +64,20 @@
                   <div class="form-group">
                     <label>Pilih Cetak per Bulan</label>
                     <select name="bulan" class="form-control">
-                      <option value="01">Januari</option>
-                      <option value="02">Februari</option>
-                      <option value="03">Maret</option>
-                      <option value="04">April</option>
-                      <option value="05">Mei</option>
-                      <option value="06">Juni</option>
-                      <option value="07">Juli</option>
-                      <option value="08">Agustus</option>
-                      <option value="09">September</option>
-                      <option value="10">Oktober</option>
-                      <option value="11">November</option>
-                      <option value="12">Desember</option>
+                      <?php
+                      foreach ($bulansaatini as $valuebulan) {
+                        ?>
+                        <option value="<?php echo $valuebulan->bulan?>">
+                          <?php
+                          $monthNum  = $valuebulan->bulan;
+                          $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                          $monthName = $dateObj->format('F'); // March
+                            echo $monthName;
+                          ?>
+                        </option>
+                        <?php
+                      }
+                      ?>
                     </select>
                   </div>
 
@@ -83,8 +85,13 @@
                     <label>Pilih Cetak per Tahun</label>
                     <select name="tahun" class="form-control" data-placeholder="Pilih Bulan">
                       <style="width: 100%;">
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
+                      <?php
+                      foreach ($tahunsaatini as $valuetahun) {
+                        ?>
+                        <option value="<?php echo $valuetahun->tahun?>"><?php echo $valuetahun->tahun ?></option>
+                        <?php
+                      }
+                      ?>
                     </select>
                   </div>
 
@@ -139,3 +146,22 @@
   </div>
 </div>
 </div>
+<script type="text/javascript">
+var tahun = {};
+$("select[name='tahun'] > option").each(function () {
+    if(tahun[this.text]) {
+        $(this).remove();
+    } else {
+        tahun[this.text] = this.value;
+    }
+});
+
+var bulan = {};
+$("select[name='bulan'] > option").each(function () {
+    if(bulan[this.text]) {
+        $(this).remove();
+    } else {
+        bulan[this.text] = this.value;
+    }
+});
+</script>

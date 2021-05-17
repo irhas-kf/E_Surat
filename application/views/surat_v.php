@@ -29,7 +29,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="date" class="form-control" name="tanggal_pengajuan">
+                  <input type="date" class="form-control" name="tanggal_pengajuan" value="<?php echo date("Y-m-d"); ?>">
                 </div>
               </div>
             </div>
@@ -43,15 +43,15 @@
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NOMER KARTU KELUARGA</label>
-                <input type="number" class="form-control" name="nkk" placeholder="NIK" required maxlength="8" size="10">
+                <label for="exampleInputEmail1">NOMOR KARTU KELUARGA</label>
+                <input type="number" class="form-control" name="nkk" placeholder="NIK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NOMER INDUK KELUARGA</label>
-                <input type="number" class="form-control" name="nik" placeholder="Nomor KK">
+                <label for="exampleInputEmail1">NOMOR INDUK KELUARGA</label>
+                <input type="number" class="form-control" name="nik" placeholder="Nomor KK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16">
               </div>
             </div>
 
@@ -65,7 +65,7 @@
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">ALAMAT</label>
-                <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                <textarea type="text" class="form-control" name="alamat" placeholder="Alamat"></textarea>
               </div>
             </div>
 
@@ -96,7 +96,7 @@
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">Keterangan</label>
-                <input type="text" class="form-control" name="keterangan" placeholder="Keterangan  ">
+                <textarea type="text" class="form-control" name="keterangan" placeholder="Keterangan  "></textarea>
               </div>
             </div>
 
@@ -112,7 +112,12 @@
     </div>
   </div>
 </section>
-<!-- /.content -->
 
 <script>
+// Variables
+var field = document.querySelector('#today');
+var date = new Date();
+// Set the value
+field.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
+    '-' + date.getDate().toString().padStart(2, 0);
 </script>

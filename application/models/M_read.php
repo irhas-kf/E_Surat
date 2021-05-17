@@ -22,6 +22,20 @@ class M_read extends CI_Model{
 		return $query->result();
 	}
 
+	function tahun_saatini(){
+		$query = $this->db->query("SELECT YEAR(rekap_surat.`tanggal_pengajuan`) AS tahun
+		FROM rekap_surat
+		GROUP BY rekap_surat.`tanggal_pengajuan`
+		ORDER BY rekap_surat.`tanggal_pengajuan` DESC");
+		return $query->result();
+	}
+
+	function bulan_saatini(){
+		$query = $this->db->query("SELECT MONTH(rekap_surat.`tanggal_pengajuan`) AS bulan
+		FROM rekap_surat");
+		return $query->result();
+	}
+
 	// function tampil_dataprofil(){
 	// 	$query = $this->db->get('sejarah');
 	// 	return $query->result();
