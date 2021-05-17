@@ -47,7 +47,7 @@
                     <div class="form-group">
                       <label>Pilih Rekap</label>
                       <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
-                      style="width: 100%;">
+                      style="width: 100%;" required>
                       <option value="tanggal_pengajuan">Tanggal Pengajuan</option>
                       <option value="nama">Nama</option>
                       <option value="nik">NIK</option>
@@ -129,14 +129,17 @@
               </tr>
             </thead>
             <tbody>
+              <?php
+                foreach($rekaptampil as $u){
+              ?>
                   <tr>
                     <?php
-                    foreach($datafiledrekapsurat as $u){
-                      foreach($rekaptampil as $a){
+                      foreach($datafiledrekapsurat as $a){
                           ?>
-                        <td><?php echo $a->$u ?></td>
-                      <?php }} ?>
+                        <td><?php echo $u->$a ?></td>
+                      <?php } ?>
                   </tr>
+                  <?php } ?>
             </tbody>
             <tfoot>
               <tr>

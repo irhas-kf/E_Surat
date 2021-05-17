@@ -44,14 +44,14 @@
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NOMER KARTU KELUARGA</label>
-                <input type="text" class="form-control" name="nkk" placeholder="NIK">
+                <input type="number" class="form-control" name="nkk" placeholder="NIK" required maxlength="8" size="10">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NOMER INDUK KELUARGA</label>
-                <input type="text" class="form-control" name="nik" placeholder="Nomor KK">
+                <input type="number" class="form-control" name="nik" placeholder="Nomor KK">
               </div>
             </div>
 

@@ -47,7 +47,7 @@
                     <div class="form-group">
                       <label>Pilih Rekap</label>
                       <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
-                      style="width: 100%;">
+                      style="width: 100%;" required>
                       <option value="tanggal_pengajuan">Tanggal Pengajuan</option>
                       <option value="nama">Nama</option>
                       <option value="nik">NIK</option>
