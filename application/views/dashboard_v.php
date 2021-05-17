@@ -17,7 +17,7 @@
 <section class="content">
   <div class="box">
     <div class="box-body">
-    <marquee><h2>Selamat Datang di Aplikasi E - Surat Dinas Kesehatan Kab. Mojokerto</h2></marquee>
+    <marquee><h2>Selamat Datang di Aplikasi E - Rekap Dinas Kesehatan Pengendalian Penduduk dan Keluarga Berencana Kota Mojokerto</h2></marquee>
     </div>
   </div>
 </section>

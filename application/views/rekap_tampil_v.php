@@ -88,7 +88,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button type="submit" name="tampil" value="tampil" class="btn btn-app"> <i class="fa fa-eye"></i> Tampilakn </button>
+                    <button type="submit" name="tampil" value="tampil" class="btn btn-app"> <i class="fa fa-eye"></i> Tampilkan </button>
                     <button type="submit" name="pdf" value="pdf" class="btn btn-app"> <i class="fa fa-file"></i> PDF </button>
                     <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
                     <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button>
