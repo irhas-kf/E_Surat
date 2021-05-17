@@ -3,7 +3,7 @@
     <div class="row mb-2">
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="<?= base_url("surat") ?>">Surat</a></li>
+          <li class="breadcrumb-item"><a href="<?= base_url("surat") ?>">Input Surat</a></li>
           <li class="breadcrumb-item active">Input</li>
         </ol>
       </div>
@@ -105,7 +105,7 @@
         <!-- /.box-body -->
         <div class="form-group">
           <div class="col-md-4">
-            <button type="submit" name="submit" class="btn btn-success pull-left"> SIMAPAN </button>
+            <button type="submit" name="submit" class="btn btn-success pull-left"> SIMPAN </button>
           </div>
         </div>
       </form>
