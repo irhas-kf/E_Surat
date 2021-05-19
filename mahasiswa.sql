@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Bulan Mei 2021 pada 18.08
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.1
+-- Generation Time: May 19, 2021 at 05:29 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `faskes`
+-- Table structure for table `faskes`
 --
 
 CREATE TABLE `faskes` (
@@ -34,7 +33,7 @@ CREATE TABLE `faskes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `faskes`
+-- Dumping data for table `faskes`
 --
 
 INSERT INTO `faskes` (`id_faskes`, `nama_faskes`) VALUES
@@ -48,7 +47,7 @@ INSERT INTO `faskes` (`id_faskes`, `nama_faskes`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_surat`
+-- Table structure for table `jenis_surat`
 --
 
 CREATE TABLE `jenis_surat` (
@@ -57,7 +56,7 @@ CREATE TABLE `jenis_surat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis_surat`
+-- Dumping data for table `jenis_surat`
 --
 
 INSERT INTO `jenis_surat` (`id_jenis_surat`, `nama_jenis_surat`) VALUES
@@ -69,7 +68,28 @@ INSERT INTO `jenis_surat` (`id_jenis_surat`, `nama_jenis_surat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `posting`
+-- Table structure for table `nama_ttd`
+--
+
+CREATE TABLE `nama_ttd` (
+  `id_nama` int(10) NOT NULL,
+  `nama_ttd` varchar(32) NOT NULL,
+  `nip` varchar(18) NOT NULL,
+  `jabatan` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nama_ttd`
+--
+
+INSERT INTO `nama_ttd` (`id_nama`, `nama_ttd`, `nip`, `jabatan`) VALUES
+(1, 'Drg. CITRA MAYANGSARI, M.Kes', '198201012006042046', 'KEPALA BIDANG KE'),
+(2, 'dr. LILY NURLAILY', '197806112009032003', 'KEPALA SEKSI PEL');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posting`
 --
 
 CREATE TABLE `posting` (
@@ -80,7 +100,7 @@ CREATE TABLE `posting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `posting`
+-- Dumping data for table `posting`
 --
 
 INSERT INTO `posting` (`id`, `judul`, `konten`, `id_user`) VALUES
@@ -89,7 +109,7 @@ INSERT INTO `posting` (`id`, `judul`, `konten`, `id_user`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rekap_surat`
+-- Table structure for table `rekap_surat`
 --
 
 CREATE TABLE `rekap_surat` (
@@ -106,18 +126,20 @@ CREATE TABLE `rekap_surat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `rekap_surat`
+-- Dumping data for table `rekap_surat`
 --
 
 INSERT INTO `rekap_surat` (`id_rekap_surat`, `id_faskes`, `id_jenis_surat`, `nik`, `no_kartu_keluarga`, `nama`, `nomor_kis`, `alamat`, `keterangan`, `tanggal_pengajuan`) VALUES
 (1, 5, 4, '3456098458903481', '3506374987450001', 'irhas', '3290459812', 'Kab. kediri', 'Test', '2021-05-10'),
 (7, 2, 4, '3456098458903486', '3506121234320254', 'fadila', '3290459813', 'Kab. Telungagung', 'Test', '2022-01-15'),
-(8, 5, 3, '3456098458903485', '3506374987450002', 'risa', '3290459821', 'Kab. Sambirejo', 'Test', '2021-06-16');
+(8, 5, 3, '3456098458903485', '3506374987450002', 'risa', '3290459821', 'Kab. Sambirejo', 'Test', '2021-06-16'),
+(10, 2, 2, '357101977955476', '357701192258889', 'ISITAWAN', '112355468721', 'JL KAWI ', 'menjadi tidak ketularan', '2021-05-19'),
+(11, 2, 2, '321447771234565', '357100144711667', 'Moch Ulum', '25885466842', 'Jl. Mager ayu', 'santai lur untuk data dummy', '2021-02-01');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_data`
+-- Table structure for table `user_data`
 --
 
 CREATE TABLE `user_data` (
@@ -128,7 +150,7 @@ CREATE TABLE `user_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_data`
+-- Dumping data for table `user_data`
 --
 
 INSERT INTO `user_data` (`ID`, `USERNAME`, `PASSWORD`, `LEVEL_ID`) VALUES
@@ -139,7 +161,7 @@ INSERT INTO `user_data` (`ID`, `USERNAME`, `PASSWORD`, `LEVEL_ID`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_level`
+-- Table structure for table `user_level`
 --
 
 CREATE TABLE `user_level` (
@@ -148,7 +170,7 @@ CREATE TABLE `user_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_level`
+-- Dumping data for table `user_level`
 --
 
 INSERT INTO `user_level` (`ID`, `LEVEL`) VALUES
@@ -159,7 +181,7 @@ INSERT INTO `user_level` (`ID`, `LEVEL`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_menu`
+-- Table structure for table `user_menu`
 --
 
 CREATE TABLE `user_menu` (
@@ -172,7 +194,7 @@ CREATE TABLE `user_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_menu`
+-- Dumping data for table `user_menu`
 --
 
 INSERT INTO `user_menu` (`ID`, `MODUL_ID`, `MENU`, `LINK`, `ICON`, `MAIN_MENU`) VALUES
@@ -190,7 +212,7 @@ INSERT INTO `user_menu` (`ID`, `MODUL_ID`, `MENU`, `LINK`, `ICON`, `MAIN_MENU`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_modul`
+-- Table structure for table `user_modul`
 --
 
 CREATE TABLE `user_modul` (
@@ -200,7 +222,7 @@ CREATE TABLE `user_modul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_modul`
+-- Dumping data for table `user_modul`
 --
 
 INSERT INTO `user_modul` (`ID`, `MODUL`, `SUPERADMIN_ONLY`) VALUES
@@ -219,7 +241,7 @@ INSERT INTO `user_modul` (`ID`, `MODUL`, `SUPERADMIN_ONLY`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_role`
+-- Table structure for table `user_role`
 --
 
 CREATE TABLE `user_role` (
@@ -233,7 +255,7 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user_role`
+-- Dumping data for table `user_role`
 --
 
 INSERT INTO `user_role` (`ID`, `LEVEL_ID`, `MODUL_ID`, `_CREATE`, `_READ`, `_UPDATE`, `_DELETE`) VALUES
@@ -276,25 +298,31 @@ INSERT INTO `user_role` (`ID`, `LEVEL_ID`, `MODUL_ID`, `_CREATE`, `_READ`, `_UPD
 --
 
 --
--- Indeks untuk tabel `faskes`
+-- Indexes for table `faskes`
 --
 ALTER TABLE `faskes`
   ADD PRIMARY KEY (`id_faskes`);
 
 --
--- Indeks untuk tabel `jenis_surat`
+-- Indexes for table `jenis_surat`
 --
 ALTER TABLE `jenis_surat`
   ADD PRIMARY KEY (`id_jenis_surat`);
 
 --
--- Indeks untuk tabel `posting`
+-- Indexes for table `nama_ttd`
+--
+ALTER TABLE `nama_ttd`
+  ADD PRIMARY KEY (`id_nama`);
+
+--
+-- Indexes for table `posting`
 --
 ALTER TABLE `posting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `rekap_surat`
+-- Indexes for table `rekap_surat`
 --
 ALTER TABLE `rekap_surat`
   ADD PRIMARY KEY (`id_rekap_surat`),
@@ -302,99 +330,105 @@ ALTER TABLE `rekap_surat`
   ADD KEY `id_jenis_surat` (`id_jenis_surat`);
 
 --
--- Indeks untuk tabel `user_data`
+-- Indexes for table `user_data`
 --
 ALTER TABLE `user_data`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `user_level`
+-- Indexes for table `user_level`
 --
 ALTER TABLE `user_level`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `user_menu`
+-- Indexes for table `user_menu`
 --
 ALTER TABLE `user_menu`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `user_modul`
+-- Indexes for table `user_modul`
 --
 ALTER TABLE `user_modul`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `user_role`
+-- Indexes for table `user_role`
 --
 ALTER TABLE `user_role`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `faskes`
+-- AUTO_INCREMENT for table `faskes`
 --
 ALTER TABLE `faskes`
   MODIFY `id_faskes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis_surat`
+-- AUTO_INCREMENT for table `jenis_surat`
 --
 ALTER TABLE `jenis_surat`
   MODIFY `id_jenis_surat` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `posting`
+-- AUTO_INCREMENT for table `nama_ttd`
+--
+ALTER TABLE `nama_ttd`
+  MODIFY `id_nama` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `rekap_surat`
+-- AUTO_INCREMENT for table `rekap_surat`
 --
 ALTER TABLE `rekap_surat`
-  MODIFY `id_rekap_surat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_rekap_surat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `user_data`
+-- AUTO_INCREMENT for table `user_data`
 --
 ALTER TABLE `user_data`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `user_level`
+-- AUTO_INCREMENT for table `user_level`
 --
 ALTER TABLE `user_level`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `user_menu`
+-- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `user_modul`
+-- AUTO_INCREMENT for table `user_modul`
 --
 ALTER TABLE `user_modul`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `user_role`
+-- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `rekap_surat`
+-- Constraints for table `rekap_surat`
 --
 ALTER TABLE `rekap_surat`
   ADD CONSTRAINT `rekap_surat_ibfk_1` FOREIGN KEY (`id_faskes`) REFERENCES `faskes` (`id_faskes`) ON DELETE CASCADE ON UPDATE CASCADE,
