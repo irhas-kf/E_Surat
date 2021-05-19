@@ -36,7 +36,7 @@
                   <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
                 </div>
               </div>
-
+              <!-- TABEL REKAP UNTUK MENAMPILKAN FORM JENIS SURAT-->
               <!-- /.box-header -->
               <div class="box-body">
 
@@ -44,8 +44,22 @@
 
                   <!-- /.col -->
                   <div class="col-md-12">
+
                     <div class="form-group">
-                      <label>Pilih Rekap</label>
+                      <label>Pilih Jenis Surat</label>
+                      <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
+                      style="width: 100%;" required>
+                      <option value="PBID Bayi Baru lahir dan Balita Kurang Dari 1 Tahun">PBID Bayi Baru lahir dan Balita Kurang Dari 1 Tahun</option>
+                      <option value="PBID Penyakit Kronis">PBID Penyakit Kronis</option>
+                      <option value="PBID Ibu hamil">PBID Ibu hamil</option>
+                      <option value="PBID ex Mandiri">PBID ex Mandiri</option>
+                      <option value="Penonaktifan PBID">Penonaktifan PBID</option>                    
+                    </select>
+                  </div>
+                <!-- BATAS TABEL REKAP UNTUK MENAMPILKAN FORM JENIS SURAT-->
+
+                    <div class="form-group">
+                      <label>Pilih Yang Tabel yang akan ditampilkan</label>
                       <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
                       style="width: 100%;" required>
                       <option value="tanggal_pengajuan">Tanggal Pengajuan</option>
@@ -101,7 +115,6 @@
                     <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
                     <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button>
                   </div>
-
                 </div>
 
                 <!-- /.form-group -->
