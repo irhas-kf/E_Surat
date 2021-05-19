@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 05:29 AM
+-- Generation Time: May 19, 2021 at 09:12 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -60,31 +60,11 @@ CREATE TABLE `jenis_surat` (
 --
 
 INSERT INTO `jenis_surat` (`id_jenis_surat`, `nama_jenis_surat`) VALUES
-(1, 'Bayi Baru Lahir'),
-(2, 'Penyakit Kronis'),
-(3, 'Pengajuan Ibu Hamil'),
-(4, 'PBID EX Mandiri');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `nama_ttd`
---
-
-CREATE TABLE `nama_ttd` (
-  `id_nama` int(10) NOT NULL,
-  `nama_ttd` varchar(32) NOT NULL,
-  `nip` varchar(18) NOT NULL,
-  `jabatan` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `nama_ttd`
---
-
-INSERT INTO `nama_ttd` (`id_nama`, `nama_ttd`, `nip`, `jabatan`) VALUES
-(1, 'Drg. CITRA MAYANGSARI, M.Kes', '198201012006042046', 'KEPALA BIDANG KE'),
-(2, 'dr. LILY NURLAILY', '197806112009032003', 'KEPALA SEKSI PEL');
+(1, 'PBID Bayi Baru lahir dan Balita <1 tahun'),
+(2, 'PBID Penyakit Kronis'),
+(3, 'PBID Ibu Hamil'),
+(4, 'PBID ex Mandiri'),
+(5, 'Penonaktifan PBID');
 
 -- --------------------------------------------------------
 
@@ -310,12 +290,6 @@ ALTER TABLE `jenis_surat`
   ADD PRIMARY KEY (`id_jenis_surat`);
 
 --
--- Indexes for table `nama_ttd`
---
-ALTER TABLE `nama_ttd`
-  ADD PRIMARY KEY (`id_nama`);
-
---
 -- Indexes for table `posting`
 --
 ALTER TABLE `posting`
@@ -373,13 +347,7 @@ ALTER TABLE `faskes`
 -- AUTO_INCREMENT for table `jenis_surat`
 --
 ALTER TABLE `jenis_surat`
-  MODIFY `id_jenis_surat` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `nama_ttd`
---
-ALTER TABLE `nama_ttd`
-  MODIFY `id_nama` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_jenis_surat` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `posting`
