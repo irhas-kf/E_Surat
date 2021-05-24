@@ -51,7 +51,7 @@ class Rekap extends MyBasecontroller {
 			$data['datafiledrekapsurat']=$multipelfiled;
 			$data['content']='rekap_tampil_v';
 			$this->load->view('templates/index',$data);
-		}
+		} 
 		if ($this->input->post('pdf')) {
 			$data['datafiledrekapsurat']=$multipelfiled;
 			$data['content']='rekap_pdf_v';
