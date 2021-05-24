@@ -37,28 +37,28 @@
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NAMA</label>
-                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap">
+                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NOMOR KARTU KELUARGA</label>
-                <input type="number" class="form-control" name="nkk" placeholder="NIK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16">
+                <input type="number" class="form-control" name="nkk" placeholder="NIK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NOMOR INDUK KELUARGA</label>
-                <input type="number" class="form-control" name="nik" placeholder="Nomor KK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16">
+                <input type="number" class="form-control" name="nik" placeholder="Nomor KK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
                 <label for="exampleInputEmail1">NOMOR KIS</label>
-                <input type="text" class="form-control" name="no_kis" placeholder="Nomor KIS">
+                <input type="text" class="form-control" name="no_kis" placeholder="Nomor KIS" required="">
               </div>
             </div>
 
@@ -84,7 +84,7 @@
             <div class="form-group">
               <div class="col-sm-6">
                 <label>Jenis Surat</label>
-                <select class="form-control" name="jenis_surat">
+                <select class="form-control" name="jenis_surat" required="">
                   <option value="0">--- Belum memilih jenis surat ---</option>
                   <?php foreach($datasurat as $s){?>
                     <option value="<?php echo $s->id_jenis_surat ?>"><?php echo $s->nama_jenis_surat ?></option>

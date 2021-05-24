@@ -26,6 +26,7 @@ class Surat extends MyBasecontroller {
 
 	public function index()
 	{
+
 		$datafaskes = $this->m_read->tampil_datafaskes();
 		$datasurat = $this->m_read->tampil_datasurat();
 
@@ -61,7 +62,11 @@ class Surat extends MyBasecontroller {
 			);
 
 		$this->m_insert->input_data($datainsert,'rekap_surat');
-
+		if($this->m_insert->affected_rows() > 0){
+		$data['teks'] = 'input data berhasil';
+		$this->session->set_flashdata($data);
+		}
+		echo $this->session->flashdata('teks');
 		redirect('/Surat');
 
 	}

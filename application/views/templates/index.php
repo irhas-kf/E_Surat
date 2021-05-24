@@ -20,12 +20,6 @@
   <!-- Morris chart -->
   <!-- jvectormap -->
   <link rel="stylesheet" href="<?=base_url();?>assets/bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="<?=base_url();?>assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?=base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- datetimepicker -->
-  <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?=base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Select2 -->
@@ -125,6 +119,12 @@
 <script src="<?=base_url();?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="<?=base_url();?>assets/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- FLOT CHARTS -->
+<script src="<?=base_url();?>assets/bower_components/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="<?=base_url();?>assets/bower_components/flot/plugins/jquery.flot.resize.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="<?=base_url();?>assets/bower_components/flot/plugins/jquery.flot.pie.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=base_url();?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
