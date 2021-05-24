@@ -47,19 +47,17 @@
 
                     <div class="form-group">
                       <label>Pilih Jenis Surat</label>
-                      <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
-                      style="width: 100%;" required>
-                      <option value="PBID Bayi Baru lahir dan Balita Kurang Dari 1 Tahun">PBID Bayi Baru lahir dan Balita Kurang Dari 1 Tahun</option>
-                      <option value="PBID Penyakit Kronis">PBID Penyakit Kronis</option>
-                      <option value="PBID Ibu hamil">PBID Ibu hamil</option>
-                      <option value="PBID ex Mandiri">PBID ex Mandiri</option>
-                      <option value="Penonaktifan PBID">Penonaktifan PBID</option>                    
-                    </select>
+                      <select class="form-control" name="jenis_surat" required="">
+                        <option value="Semua Jenis Surat">--- jenis surat bisa dipilih/tidak ---</option>
+                        <?php foreach($datasurat as $s){?>
+                          <option value="<?php echo $s->id_jenis_surat ?>"><?php echo $s->nama_jenis_surat ?></option>
+                        <?php } ?>
+                      </select>
                   </div>
                 <!-- BATAS TABEL REKAP UNTUK MENAMPILKAN FORM JENIS SURAT-->
 
                     <div class="form-group">
-                      <label>Pilih Yang Tabel yang akan ditampilkan</label>
+                      <label>Pilih yang akan ditampilkan *</label>
                       <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
                       style="width: 100%;" required>
                       <option value="tanggal_pengajuan">Tanggal Pengajuan</option>
@@ -76,7 +74,7 @@
 
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Pilih Cetak per Bulan</label>
+                    <label>Pilih Cetak per Bulan *</label>
                     <select name="bulan" class="form-control">
                       <?php
                       foreach ($bulansaatini as $valuebulan) {
@@ -96,7 +94,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label>Pilih Cetak per Tahun</label>
+                    <label>Pilih Cetak per Tahun *</label>
                     <select name="tahun" class="form-control" data-placeholder="Pilih Bulan">
                       <style="width: 100%;">
                       <?php
@@ -111,9 +109,9 @@
 
                   <div class="form-group">
                     <button type="submit" name="tampil" value="tampil" class="btn btn-app"> <i class="fa fa-eye"></i> Tampilkan </button>
-                    <button type="submit" name="pdf" value="pdf" class="btn btn-app"> <i class="fa fa-file"></i> PDF </button>
-                    <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
-                    <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button>
+                    <a href="#" target="_blank"><button type="submit" name="cetakpdf" value="cetakpdf" class="btn btn-app"> <i class="fa fa-print"></i> Cetak/PDF </button></a>
+                    <!-- <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
+                    <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button> -->
                   </div>
                 </div>
 

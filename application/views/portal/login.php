@@ -27,11 +27,12 @@
 <?php if($this->session->userdata('admin')==""): ?>
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?= base_url() ?>"><b>E</b>Surat</a>
+    <a href="<?= base_url() ?>"><img style="width:100%;" src="<?=base_url();?>img/logo.png"></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg"><?= "CodeIgniter v.".CI_VERSION ?></p>
+    <marquee><p class="login-box-msg">Selamat Datang di Aplikasi iRekom Dinas Kesehatan Pengendalian Penduduk dan Keluarga Berencana Kota Mojokerto</p></marquee>
+    <!-- <p class="login-box-msg"><?= "CodeIgniter v.".CI_VERSION ?></p> -->
 
 
     <?php

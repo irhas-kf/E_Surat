@@ -22,6 +22,20 @@ class M_read extends CI_Model{
 		return $query->result();
 	}
 
+	function rekap_tampil_jenis_surat($bulan,$tahun,$jenis_surat){
+		$query = $this->db->query("SELECT rekap_surat.*,faskes.*,jenis_surat.*
+		FROM rekap_surat
+		JOIN faskes ON faskes.`id_faskes` = rekap_surat.`id_faskes`
+		JOIN jenis_surat ON jenis_surat.`id_jenis_surat` = rekap_surat.`id_jenis_surat`
+		WHERE YEAR(rekap_surat.`tanggal_pengajuan`)='$tahun' AND MONTH(rekap_surat.`tanggal_pengajuan`)='$bulan' AND jenis_surat.`id_jenis_surat`='$jenis_surat'
+		ORDER BY rekap_surat.`id_rekap_surat` DESC");
+		return $query->result();
+	}
+	function rekap_tampil_jenis_surat_array($jenis_surat){
+		$query = $this->db->query("SELECT * FROM jenis_surat WHERE id_jenis_surat = '$jenis_surat' LIMIT 1");
+		return $query->result_array();
+	}
+
 	function tahun_saatini(){
 		$query = $this->db->query("SELECT YEAR(rekap_surat.`tanggal_pengajuan`) AS tahun
 		FROM rekap_surat

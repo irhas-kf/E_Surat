@@ -24,7 +24,7 @@
           <div class="box-body">
             <div class="form-group">
               <div class="col-sm-6">
-                <label>TANGGAL PENGAJUAN</label>
+                <label>TANGGAL PENGAJUAN *</label>
                 <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
@@ -36,42 +36,42 @@
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NAMA</label>
+                <label for="exampleInputEmail1">NAMA *</label>
                 <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NOMOR KARTU KELUARGA</label>
+                <label for="exampleInputEmail1">NOMOR KARTU KELUARGA *</label>
                 <input type="number" class="form-control" name="nkk" placeholder="NIK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NOMOR INDUK KELUARGA</label>
+                <label for="exampleInputEmail1">NOMOR INDUK KELUARGA *</label>
                 <input type="number" class="form-control" name="nik" placeholder="Nomor KK (16 digit)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">NOMOR KIS</label>
+                <label for="exampleInputEmail1">NOMOR KIS *</label>
                 <input type="text" class="form-control" name="no_kis" placeholder="Nomor KIS" required="">
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">ALAMAT</label>
+                <label for="exampleInputEmail1">ALAMAT *</label>
                 <textarea type="text" class="form-control" name="alamat" placeholder="Alamat"></textarea>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label>NAMA FASKES / PUSKESMAS</label>
+                <label>NAMA FASKES / PUSKESMAS *</label>
                 <select class="form-control" name="faskes" required="">
                   <option value="0">--- Belum memilih Faskes / Puskesmas ---</option>
                   <?php foreach($datafaskes as $u){?>
@@ -83,7 +83,7 @@
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label>Jenis Surat</label>
+                <label>Jenis Surat *</label>
                 <select class="form-control" name="jenis_surat" required="">
                   <option value="0">--- Belum memilih jenis surat ---</option>
                   <?php foreach($datasurat as $s){?>
@@ -95,7 +95,7 @@
 
             <div class="form-group">
               <div class="col-sm-6">
-                <label for="exampleInputEmail1">Keterangan</label>
+                <label for="exampleInputEmail1">Keterangan *</label>
                 <textarea type="text" class="form-control" name="keterangan" placeholder="Keterangan  "></textarea>
               </div>
             </div>

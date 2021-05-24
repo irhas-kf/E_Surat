@@ -45,7 +45,17 @@
                   <!-- /.col -->
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Pilih Rekap</label>
+                      <label>Pilih Jenis Surat</label>
+                      <select class="form-control" name="jenis_surat" required="">
+                        <option value="Semua Jenis Surat">--- jenis surat bisa dipilih/tidak ---</option>
+                        <?php foreach($datasurat as $s){?>
+                          <option value="<?php echo $s->id_jenis_surat ?>"><?php echo $s->nama_jenis_surat ?></option>
+                        <?php } ?>
+                      </select>
+                  </div>
+
+                    <div class="form-group">
+                      <label>Pilih yang akan ditampilkan *</label>
                       <select name="subject[]" multiple size=9 class="form-control select2" data-placeholder="Pilih Rekap"
                       style="width: 100%;" required>
                       <option value="tanggal_pengajuan">Tanggal Pengajuan</option>
@@ -61,7 +71,7 @@
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Pilih Cetak per Bulan</label>
+                    <label>Pilih Cetak per Bulan *</label>
                     <select name="bulan" class="form-control">
                       <?php
                       foreach ($bulansaatini as $valuebulan) {
@@ -81,7 +91,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label>Pilih Cetak per Tahun</label>
+                    <label>Pilih Cetak per Tahun *</label>
                     <select name="tahun" class="form-control" data-placeholder="Pilih Bulan">
                       <style="width: 100%;">
                       <?php
@@ -96,9 +106,9 @@
 
                   <div class="form-group">
                     <button type="submit" name="tampil" value="tampil" class="btn btn-app"> <i class="fa fa-eye"></i> Tampilkan </button>
-                    <button type="submit" name="pdf" value="pdf" class="btn btn-app"> <i class="fa fa-file"></i> PDF </button>
-                    <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
-                    <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button>
+                    <button type="submit" name="cetakpdf" value="cetakpdf" class="btn btn-app"> <i class="fa fa-file"></i> Cetak/PDF </button>
+                    <!-- <button type="submit" name="excel" value="excel" class="btn btn-app"> <i class="fa fa-file"></i> EXCEL </button>
+                    <button type="submit" name="word" value="word" class="btn btn-app"> <i class="fa fa-file"></i> WORD </button> -->
                   </div>
 
                 </div>
@@ -118,7 +128,11 @@
       <div class="col-md-9">
       <div class="box box-default">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Table Rekap</h3>
+          <h3 class="box-title">Data Table Rekap
+            <b>
+                <?php echo $rekaptampilarray; ?>
+            </b>
+          </h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
           </div>
