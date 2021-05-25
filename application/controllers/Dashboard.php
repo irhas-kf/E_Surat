@@ -28,6 +28,10 @@ class Dashboard extends MyBasecontroller {
 	{
 
 		$data['content']='dashboard_v';
+		for ($x = 0; $x <= 11; $x++) {
+		 $data['report'] = $this->m_read->report($x);
+		 //echo json_encode($data);
+		}
 
 		$this->load->view('templates/index',$data);
 	}

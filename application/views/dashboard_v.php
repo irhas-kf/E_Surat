@@ -11,7 +11,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
 
 <!--(ALAMAT PEMANGGILAN DIAGRAM CYLINDERS)
-<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-3d.js"></script>
 <script src="https://code.highcharts.com/modules/cylinder.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -21,7 +21,7 @@
 
 <!--
 (JS UNTUK MENAMPILKAN DIAGRAM BATANG VIEW DARI SAMPING)
-<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="/js/highcharts.js"></script>
 <script src="/js/highstock.js"></script>
 <script src="/js/highmaps.js"></script>
@@ -51,18 +51,18 @@
                 <div class="card-header">
                     <h3 class="card-title">
                       <i class="far fa-chart-bar"></i>
-                      Grafik Rekap Surat per bulan
+                      Grafik Rekap Surat per Bulan
                     </h3>
                 </div>
-            <div class="card-body">   
-                    
+            <div class="card-body">
+
                     <figure class="highcharts-figure">
                       <div id="container"></div>
                       <p class="highcharts-description">
                         Data Berdasarkan Admin Sebagai Penginput Surat
                       </p>
                     </figure>
-            
+
                        <!--MENAMPILKAN DIAGRAM CYLINDER
                             <figure class="highcharts-figure">
                               <div id="container"></div>
@@ -71,15 +71,23 @@
                                 </p>
                             </figure>
                             -->
-               <!-- <div id="container" style="width:100%; height:400px;"></div> (MENAMPILKAN GRAFIK DIAGRAM DARI SAMPING) -->  
-                <!--<div id="bar-chart" style="height: 400px;"></div> (MENAMPILKAN DIAGRAM BAWAAN MILIK IRHAS)  --> 
-              
+               <!-- <div id="container" style="width:100%; height:400px;"></div> (MENAMPILKAN GRAFIK DIAGRAM DARI SAMPING) -->
+                <!--<div id="bar-chart" style="height: 400px;"></div> (MENAMPILKAN DIAGRAM BAWAAN MILIK IRHAS)  -->
+
               </div>
               </div>
             </div>
       </div>
     </section>
 
+    <?php
+      /* Mengambil query report*/
+      foreach($report as $result){
+          $value[] = (float) $result->hasil; //ambil nilai
+          echo console($data);
+      }
+      /* end mengambil query*/
+    ?>
 
 <script>
 Highcharts.chart('container', {
@@ -131,23 +139,28 @@ Highcharts.chart('container', {
   },
   series: [{
     name: 'PBID SURAT 1',
-    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: <?php echo json_encode($value);?>
+    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 2',
-    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+    data: <?php echo json_encode($value);?>
+    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 3',
-    data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+    data: <?php echo json_encode($value);?>
+    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 4',
-    data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+    data: <?php echo json_encode($value);?>
+    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
   }, {
     name: 'PBID SURAT 5',
-    data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
-  
+    data: <?php echo json_encode($value);?>
+    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
   }]
 });
 
@@ -180,7 +193,7 @@ Highcharts.chart('container', {
     },
     series: [{
         data: [100, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-        name: 'cylinder', 
+        name: 'cylinder',
         showInLegend: true
     }]
 });
@@ -220,9 +233,9 @@ Highcharts.chart('container', {
 });
 </script> -->
 
-<!-- <script> 
+<!-- <script>
 Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-c.json', function (data) { (MENAMPILKAN DIAGRAM GRAFIK DARI SAMPING)
-    // Create the chart 
+    // Create the chart
     Highcharts.stockChart('container', {
 
 
@@ -274,4 +287,3 @@ Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-c.json', function
 
   })
 </script>  -->
-

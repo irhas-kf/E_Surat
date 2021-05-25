@@ -50,6 +50,19 @@ class M_read extends CI_Model{
 		return $query->result();
 	}
 
+	function report($x){
+        $query = $this->db->query("SELECT COUNT(id_jenis_surat) AS hasil
+				FROM rekap_surat
+				WHERE id_jenis_surat = '4' AND MONTH(tanggal_pengajuan) = '$x'");
+
+        if($query->num_rows() > 0){
+            foreach($query->result() as $data){
+                $hasil[] = $data;
+            }
+            return $hasil;
+        }
+    }
+
 	// function tampil_dataprofil(){
 	// 	$query = $this->db->get('sejarah');
 	// 	return $query->result();
