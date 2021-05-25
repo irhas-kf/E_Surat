@@ -31,7 +31,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <marquee><p class="login-box-msg">Selamat Datang di Aplikasi iRekom Dinas Kesehatan Pengendalian Penduduk dan Keluarga Berencana Kota Mojokerto</p></marquee>
+    <marquee><p class="login-box-msg">Selamat Datang di Aplikasi SIRekom Dinas Kesehatan Pengendalian Penduduk dan Keluarga Berencana Kota Mojokerto</p></marquee>
     <!-- <p class="login-box-msg"><?= "CodeIgniter v.".CI_VERSION ?></p> -->
 
 
