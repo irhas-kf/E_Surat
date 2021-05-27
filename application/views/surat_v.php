@@ -105,19 +105,16 @@
         <!-- /.box-body -->
         <div class="form-group">
           <div class="col-md-5">
-            <button type="submit" name="submit" class="btn btn-success pull-left"> SIMPAN </button>
-
+            <button type="submit" name="submit" id="swalDefaultSuccess" class="btn btn-success"> SIMPAN </button>
         </div>
-
          <div class="form-group">
           <div class="col-md-1">
-            <button type="submit" name="submit" class="btn btn-danger pull-left"> HAPUS </button>
+            <button type="button" name="button" onClick="window.location.reload();" class="btn btn-danger pull-left"> HAPUS </button>
         </div>
       </form>
     </div>
   </div>
 </section>
-
 <script>
 // Variables
 var field = document.querySelector('#today');

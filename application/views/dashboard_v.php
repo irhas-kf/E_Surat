@@ -82,10 +82,10 @@
 
     <?php
       /* Mengambil query report*/
-      foreach($report as $result){
-          $value[] = (float) $result->hasil; //ambil nilai
-          echo console($data);
-      }
+      // foreach($report as $result){
+      //     $value[] = (float) $result->hasil; //ambil nilai
+      //     echo console($data);
+      // }
       /* end mengambil query*/
     ?>
 
@@ -139,27 +139,22 @@ Highcharts.chart('container', {
   },
   series: [{
     name: 'PBID SURAT 1',
-    data: <?php echo json_encode($value);?>
-    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [12.9, 71.5, 2.4, 129.2, 144.0, 176.0, 135.6, 24.5, 216.4, 194.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 2',
-    data: <?php echo json_encode($value);?>
-    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [14.9, 71.5, 66.4, 98.2, 144.0, 45.0, 75.6, 45.5, 5.4, 66.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 3',
-    data: <?php echo json_encode($value);?>
-    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [343.9, 71.5, 7.4, 78.2, 87.0, 45.0, 65.6, 56.5, 216.4, 7.1, 95.6, 54.4]
 
   }, {
     name: 'PBID SURAT 4',
-    data: <?php echo json_encode($value);?>
-    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [35.9, 71.5, 56.4, 65.2, 56.0, 6.0, 7.6, 66.5, 55.4, 88.1, 88.6, 54.4]
   }, {
     name: 'PBID SURAT 5',
-    data: <?php echo json_encode($value);?>
-    // data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [29.9, 71.5, 45.4, 66.2, 78.0, 57.0, 35.6, 53.5, 42.4, 12.1, 21.6, 23.4]
 
   }]
 });

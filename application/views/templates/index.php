@@ -34,6 +34,7 @@
   <!-- SweetAlert -->
   <link rel="stylesheet" href="<?=base_url();?>assets/plugins/sweetalert/sweetalert.css">
 
+
   <!-- DataTables -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 
@@ -135,8 +136,21 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
 <!-- SweetAlert -->
-<script src="<?=base_url();?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="<?=base_url();?>assets/plugins/sweetalert/sweetalert.js"></script>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#swalDefaultSuccess').click(function() {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: '<?php echo $this->session->flashdata('data'); ?>',
+          showConfirmButton: false,
+          timer: 1500
+        })
+    });
+  });
+</script>
 <script>
   $(document).ready(function(){
     $("#btn-logout").click(function(){

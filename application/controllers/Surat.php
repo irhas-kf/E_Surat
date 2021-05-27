@@ -26,6 +26,8 @@ class Surat extends MyBasecontroller {
 
 	public function index()
 	{
+		//Load session library
+  	$this->load->library('session');
 
 		$datafaskes = $this->m_read->tampil_datafaskes();
 		$datasurat = $this->m_read->tampil_datasurat();
@@ -39,6 +41,10 @@ class Surat extends MyBasecontroller {
 
 	public function input_rekap_aksi()
 	{
+		//Load session library
+    $this->load->library('session');
+    $this->load->helper('url');
+
 		$tanggal_pengajuan = $this->input->post('tanggal_pengajuan');
 		$nama = $this->input->post('nama');
 		$nkk = $this->input->post('nkk');
@@ -62,12 +68,8 @@ class Surat extends MyBasecontroller {
 			);
 
 		$this->m_insert->input_data($datainsert,'rekap_surat');
-		if($this->m_insert->affected_rows() > 0){
-		$data['teks'] = 'input data berhasil';
-		$this->session->set_flashdata($data);
-		}
-		echo $this->session->flashdata('teks');
+		//add flash data
+		$this->session->set_flashdata('data','data berhasil di input.');
 		redirect('/Surat');
-
 	}
 }
