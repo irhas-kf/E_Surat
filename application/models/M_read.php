@@ -63,6 +63,21 @@ class M_read extends CI_Model{
         }
     }
 
+	public function loadDataGrafik()
+	{
+		// query load data dari grafik
+		return $this->db->select('YEAR(rekap.tanggal_pengajuan) AS tahun,
+							rekap.id_jenis_surat,
+							jenis.nama_jenis_surat, 
+							MONTH(rekap.tanggal_pengajuan) AS bulan,
+							COUNT(rekap.id_rekap_surat) AS jumlah')
+						->where(['YEAR(rekap.tanggal_pengajuan)'=>date('Y')])
+						->join('jenis_surat jenis', 'jenis.id_jenis_surat = rekap.id_jenis_surat', 'left')
+						->group_by('rekap.id_jenis_surat, YEAR(rekap.tanggal_pengajuan), MONTH(rekap.tanggal_pengajuan)')
+						->order_by('rekap.id_jenis_surat, YEAR(rekap.tanggal_pengajuan), MONTH(rekap.tanggal_pengajuan)')
+						->get('rekap_surat rekap');
+	}
+
 	// function tampil_dataprofil(){
 	// 	$query = $this->db->get('sejarah');
 	// 	return $query->result();
