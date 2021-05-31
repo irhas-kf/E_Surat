@@ -121,7 +121,8 @@ Highcharts.chart('container', {
     min: 0,
     title: {
       text: 'Tahun <?= date('Y'); ?>'
-    }
+    },
+    allowDecimals: false,
   },
   tooltip: {
     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
